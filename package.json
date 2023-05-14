@@ -1,34 +1,40 @@
 {
-  "name": "myreact-ui-lib",
-  "version": "1.0.3",
-  "description": "react, tailwind, TS",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production babel src/lib --out-dir dist --copy-files"
-  },
-  "keywords": [
-    "react",
-    "tailwind",
-    "ts"
-  ],
-  "author": "F",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "autoprefixer": "^10.4.14",
-    "babel-cli": "^6.26.0",
-    "postcss": "^8.4.23",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.4"
-  }
+    "name": "myreact-ui-lib",
+    "version": "1.0.5",
+    "description": "react, tailwind, TS",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "rm -rf dist/ && babel src/lib && npm run build:esm && npm run build:cjs && npm run tw",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+        "tw": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    },
+    "keywords": [
+        "react",
+        "tailwind",
+        "ts"
+    ],
+    "author": "F",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.1.4",
+        "@types/react": "^18.2.6",
+        "@types/react-dom": "^18.2.4",
+        "autoprefixer": "^10.4.14",
+        "babel-cli": "^6.26.0",
+        "postcss": "^8.4.23",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tailwindcss": "^3.3.2",
+        "typescript": "^5.0.4"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
 }

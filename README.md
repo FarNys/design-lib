@@ -1,5 +1,3 @@
-# simple-component-library
+# React Component Library (Tailwind+TS)
 
-A library of React components created using tailwind and ts.## Installation
-Run the following command:
-`npm install simple-component-library`
+DONT DOWNLOAD, JUST FOR TEST
