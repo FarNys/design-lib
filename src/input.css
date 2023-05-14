@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sm {
+  @apply px-2 py-1 text-ex;
+}
+.md {
+  @apply px-4 py-2;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+.animate-delay-1000 {
+  animation-delay: 1000ms;
+}
+.animate-delay-1500 {
+  animation-delay: 1500ms;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: rgb(56 189 248);
+  cursor: pointer;
+}

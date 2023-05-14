@@ -1,17 +1,17 @@
 {
   "name": "myreact-ui-lib",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "react, tailwind, TS",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files"
+    "build": "NODE_ENV=production babel src/lib --out-dir dist --copy-files"
   },
   "keywords": [
     "react",
