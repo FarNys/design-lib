@@ -1,6 +1,6 @@
 {
     "name": "myreact-ui-lib",
-    "version": "1.0.8",
+    "version": "1.0.11",
     "description": "react, tailwind, TS",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
