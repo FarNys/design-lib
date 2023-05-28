@@ -13,7 +13,7 @@ interface SingleTab {
     content: React.ReactNode;
 }
 
-const Tabs = ({ className, tabsValue, variant, ...rest }: TabsType) => {
+export const Tabs = ({ className, tabsValue, variant, ...rest }: TabsType) => {
     const [activeTabId, setactiveTabId] = useState<string>(tabsValue[0].id);
     const changeActiveHandler = (item: SingleTab) => {
         setactiveTabId(item.id);
